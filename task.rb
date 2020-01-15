@@ -7,7 +7,7 @@ def q1
   # 以下に回答を記載
   names << "斎藤"
   names.each do |name|
-    puts name
+    p name
   end
 
 end
@@ -26,15 +26,14 @@ def q3
   numbers = [1, 5, 8, 10, 2, 3, 2, 3, 3, 1, 4, 5, 9]
 
   # 以下に回答を記載
-  puts numbers.count(9)
+  puts numbers.count(3)
 end
 
 def q4
   sports = ["サッカー", "フットサル", nil, "野球", "バスケ", nil, "バレー"]
 
   # 以下に回答を記載
-  sports.delete(nil)
-  puts sports
+  puts sports.compact
 end
 
 def q5
@@ -43,18 +42,10 @@ def q5
 
   # 以下に回答を記載
   puts "array1 = []"
-  if !array1.empty?
-    puts true
-  else
-    puts false
-  end
+  puts array1.empty?
 
   puts "array2 = []"
-  if !array2.empty?
-    puts true
-  else
-    puts false
-  end
+  puts array2.empty?
 
 end
 
