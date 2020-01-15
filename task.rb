@@ -42,6 +42,19 @@ def q5
   array2 = [1, 5, 8, 10]
 
   # 以下に回答を記載
+  puts "array1 = []"
+  if !array1.empty?
+    puts true
+  else
+    puts false
+  end
+
+  puts "array2 = []"
+  if !array2.empty?
+    puts true
+  else
+    puts false
+  end
 
 end
 
