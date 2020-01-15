@@ -33,7 +33,8 @@ def q4
   sports = ["サッカー", "フットサル", nil, "野球", "バスケ", nil, "バレー"]
 
   # 以下に回答を記載
-
+  sports.delete(nil)
+  puts sports
 end
 
 def q5
