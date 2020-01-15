@@ -26,7 +26,7 @@ def q3
   numbers = [1, 5, 8, 10, 2, 3, 2, 3, 3, 1, 4, 5, 9]
 
   # 以下に回答を記載
-
+  puts numbers.count(9)
 end
 
 def q4
