@@ -160,7 +160,21 @@ end
 
 class UserQ17
   # 以下に回答を記載
+  def initialize(user_profile)
+    @name = user_profile[:name]
+    @age = user_profile[:age]
+    @gender = user_profile[:gender]
+    @admin = user_profile[:admin]
+  end
 
+  def info
+    puts <<~TEXT
+      名前: #{@name}
+      年齢: #{@age}
+      性別: #{@gender}
+      管理者権限: #{@admin ? "有り" : "無し"}
+    TEXT
+  end
 end
 
 def q17
