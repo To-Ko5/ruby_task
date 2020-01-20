@@ -160,7 +160,7 @@ end
 
 class UserQ17
   # 以下に回答を記載
-  def initialize(user_profile)
+  def initialize(**user_profile)
     @name = user_profile[:name]
     @age = user_profile[:age]
     @gender = user_profile[:gender]
@@ -189,7 +189,7 @@ end
 
 class UserQ18
   # 以下に回答を記載
-  def initialize(user_profile)
+  def initialize(**user_profile)
     @name = user_profile[:name]
     @age = user_profile[:age]
   end
@@ -229,7 +229,7 @@ end
 class UserQ20
   # 以下に回答を記載
   attr_accessor :name,:age
-  def initialize(user_profile)
+  def initialize(**user_profile)
     @name = user_profile[:name]
     @age = user_profile[:age]
   end
@@ -237,23 +237,23 @@ end
 
 class Zoo
   # 以下に回答を記載
-  def initialize(zoo_info)
+  def initialize(**zoo_info)
     @name = zoo_info[:name]
     @entry_fee = zoo_info[:entry_fee]
   end
 
   def info_entry_fee(user)
-    case user.age
+    age_classification = case user.age
     when 0..5 
-      age_classification = @entry_fee[:infant]
+      @entry_fee[:infant]
     when 6..12 
-      age_classification = @entry_fee[:children]
+      @entry_fee[:children]
     when 13..64 
-      age_classification = @entry_fee[:adult]
+      @entry_fee[:adult]
     when 65..120 
-      age_classification = @entry_fee[:senior]
+      @entry_fee[:senior]
     else
-      age_classification = "‐‐‐‐"
+       "‐‐‐‐"
     end
     puts "#{user.name}さんの入場料金は #{age_classification} 円です"
   end
@@ -270,7 +270,7 @@ def q20
     UserQ20.new(name: "あじー", age: 32),
     UserQ20.new(name: "ぎん", age: 108)
   ]
-
+  
   users.each do |user|
     zoo.info_entry_fee(user)
   end
